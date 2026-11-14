@@ -1,0 +1,67 @@
+.breadcrumb-page {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb-page a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb-page span {
+    color: #8a5a2e;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-left iframe {
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.btn-submit {
+    background-color: #5c2e1a;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    background-color: #43200f;
+}
