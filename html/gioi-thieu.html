@@ -1,0 +1,808 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nhà Đồ Cổ - Sản phẩm chất lượng - Giá hợp lý</title>
+    <link rel="icon" href="img/logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .container {
+            width: 1238px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-top: 8px solid #713217;
+        }
+
+        .header-top {
+            height: 127px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search {
+            width: 200px;
+            height: 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+        }
+
+        .menu {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+            .menu > li:first-child {
+                width: 295px;
+                height: 50px;
+                background-color: #dfab80;
+                display: flex;
+                align-items: center;
+                padding-left: 22px;
+                flex-shrink: 0;
+                position: relative;
+            }
+
+                .menu > li:first-child > ul {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background-color: white;
+                    display: none;
+                    z-index: 1000;
+                }
+
+                    .menu > li:first-child > ul > li {
+                        width: 100%;
+                        height: 38px;
+                        background: white;
+                        border-bottom: 1px solid #ddd;
+                        padding: 0 15px;
+                        list-style: none;
+                    }
+
+                .menu > li:first-child:hover > ul {
+                    display: block;
+                }
+
+
+            /* Dropdown HÀNG SƯU TẦM KHÁC */
+            .menu li {
+                position: relative;
+            }
+
+                /* Menu con */
+                .menu li ul {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 220px;
+                    background-color: white;
+                    display: none;
+                    z-index: 1000;
+                    list-style: none;
+                    padding: 0;
+                }
+
+                /* Hiển thị khi di chuột vào mục cha */
+                .menu li:hover > ul {
+                    display: block;
+                }
+
+                /* Các mục bên trong dropdown */
+                .menu li ul li {
+                    width: 100%;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 15px;
+                    background-color: white;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                    /* Link trong dropdown */
+                    .menu li ul li a {
+                        display: block;
+                        width: 100%;
+                        color: black;
+                        text-decoration: none;
+                        font-size: 14px;
+                    }
+
+                    /* Hiệu ứng hover */
+                    .menu li ul li:hover {
+                        background-color: #f2f2f2;
+                    }
+
+                    .menu li ul li a:hover {
+                        color: #dfab80;
+                    }
+
+            .menu a {
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+                .menu a:hover {
+                    color: #dfab80;
+                }
+
+            .menu > li:first-child > a:hover {
+                color: #000000;
+            }
+
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search button {
+            border: none;
+            background: none;
+            color: #dda477;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .cart {
+            margin-left: 10px;
+        }
+
+            .cart a {
+                text-decoration: none;
+                color: #dda477;
+                font-size: 20px;
+                position: relative;
+            }
+
+            .cart span {
+                position: absolute;
+                top: -10px;
+                right: -12px;
+                background-color: #dda477;
+                color: white;
+                font-size: 11px;
+                border-radius: 50%;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+
+        /* ==========================
+   RESPONSIVE NAVIGATION
+========================== */
+
+        /* TABLET */
+        @media (max-width: 1024px) {
+            .container {
+                width: 95%;
+            }
+
+            .menu {
+                gap: 15px;
+            }
+
+                .menu > li:first-child {
+                    width: 200px;
+                }
+
+                .menu a {
+                    font-size: 13px;
+                }
+        }
+
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            /* Navigation */
+            nav {
+                width: 100%;
+                overflow: visible;
+            }
+
+                nav .container {
+                    width: 100%;
+                    overflow: visible;
+                }
+
+            /* Menu chính */
+            .menu {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+                /* Các mục menu */
+                .menu > li {
+                    width: 100%;
+                    min-height: 45px;
+                    height: auto;
+                    padding: 12px 15px;
+                    background-color: #f2f2f2;
+                    border-bottom: 1px solid #ddd;
+                    position: relative;
+                    white-space: normal;
+                }
+
+                    /* Danh mục */
+                    .menu > li:first-child {
+                        width: 100%;
+                        height: auto;
+                        min-height: 45px;
+                        padding: 12px 15px;
+                        background-color: #dfab80;
+                    }
+
+                /* Link */
+                .menu a {
+                    font-size: 14px;
+                }
+
+                /* Ẩn tất cả dropdown */
+                .menu > li > ul,
+                .menu > li:first-child > ul {
+                    position: static;
+                    width: 100%;
+                    display: none;
+                    background-color: white;
+                    margin-top: 12px;
+                    padding: 0;
+                    z-index: 1000;
+                }
+
+                /* Bấm vào mục cha để mở dropdown */
+                .menu > li:focus-within > ul {
+                    display: block;
+                }
+
+                /* Các mục con */
+                .menu > li > ul > li {
+                    width: 100%;
+                    height: 40px;
+                    padding: 0 15px;
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    border-bottom: 1px solid #ddd;
+                }
+
+                    .menu > li > ul > li a {
+                        display: block;
+                        width: 100%;
+                        font-size: 14px;
+                    }
+
+                    /* Hover mục con */
+                    .menu > li > ul > li:hover {
+                        background-color: #f2f2f2;
+                    }
+        }
+
+
+        /* ĐIỆN THOẠI NHỎ */
+        @media (max-width: 480px) {
+
+            .menu > li {
+                padding: 12px;
+            }
+
+            .menu a {
+                font-size: 13px;
+            }
+        }
+
+
+
+        /* 
+footer */
+
+        /* FOOTER */
+        footer {
+            width: 100%;
+            background-color: #713014;
+            color: white;
+            margin-top: 0;
+            flex-shrink: 0;
+        }
+
+        /* Phần nội dung chính */
+        .footer-main {
+            max-width: 1240px;
+            margin: auto;
+            padding: 25px 20px 55px;
+            display: grid;
+            grid-template-columns: 1.1fr 1.1fr 1fr 1.1fr;
+            gap: 20px;
+        }
+
+            .footer-main h3 {
+                color: #e3ad7e;
+                font-size: 21px;
+                font-weight: normal;
+                margin-bottom: 18px;
+            }
+
+
+        .footer-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
+
+        .footer-info .footer-slogan {
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+
+        .footer-policy ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-policy li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+            .footer-policy li a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                padding: 11px 0;
+                font-size: 15px;
+                transition: 0.3s;
+            }
+
+                .footer-policy li a:hover {
+                    color: #e3ad7e;
+                    padding-left: 8px;
+                }
+
+
+        .footer-facebook iframe {
+            width: 100%;
+            max-width: 295px;
+            border-radius: 10px;
+        }
+
+        /* Đăng ký nhận tin */
+        .footer-newsletter form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-newsletter input {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .footer-newsletter button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e3ad7e;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .footer-newsletter button:hover {
+                background-color: #c88e60;
+            }
+
+
+        .footer-bottom {
+            background-color: #e3ad7e;
+            color: white;
+            text-align: center;
+            padding: 18px 10px;
+            font-size: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Lạc làm */
+
+        .breadcrumb-container .container {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+
+        .breadcrumb {
+            font-size: 18px;
+            color: #333;
+        }
+
+            .breadcrumb a {
+                color: #333;
+                text-decoration: none;
+            }
+
+                .breadcrumb a:hover {
+                    color: #dfab80;
+                }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas: "article-cell right-cell"; /*thành thêm để khóa chặt vị trí của article-cell sang trái*/
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 22px;
+            color: #222;
+            font-weight: normal;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .sort-bar select {
+            margin-left: 10px;
+            padding: 6px 30px 6px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+            outline: none;
+        }
+
+            .sort-bar select:hover {
+                border-color: #dfab80;
+            }
+
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /*BỔ SUNG CSS TRANG GIỚI THIỆU*/
+        main {
+            padding: 15px 0 50px;
+        }
+
+        /*Nội dung bài viết */
+        article {
+            grid-area: article-cell;
+        }
+
+            article h1 {
+                font-size: 26px;
+                font-weight: normal;
+                color: #111;
+                margin-bottom: 35px;
+            }
+
+            article section {
+                margin-bottom: 18px;
+            }
+
+            article h2 {
+                font-size: 16px;
+                font-weight: bold;
+                color: #692c12;
+                margin-bottom: 12px;
+            }
+
+            article p {
+                font-size: 15px;
+                line-height: 1.65;
+                color: #222;
+                text-align: justify;
+                margin-bottom: 14px;
+            }
+
+            article ul {
+                padding-left: 35px;
+                margin-bottom: 14px;
+            }
+
+                article ul li {
+                    font-size: 15px;
+                    line-height: 1.65;
+                    color: #222;
+                    margin-bottom: 6px;
+                }
+        
+        /*bố cục chia sẻ: ... */
+        .share-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 15px;
+            color: #333;
+        }
+
+            .share-section a {
+                text-decoration: none;
+                color: #666;
+                font-weight: bold;
+                transition: 0.2s;
+            }
+
+                .share-section a:hover {
+                    color: #692c12;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-top">
+            <a href="gioi-thieu.html"><img src="img/logo.png" height="100px"> </a>
+            <div class="header-right">
+                <div class="search">
+                    <input type="text" placeholder="tìm kiếm">
+                    <button type="button"> ⌕</button>
+
+                </div>
+                <div class="cart">
+                    <a href="#">
+                        🛒
+                        <span>0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="menu">
+                    <li>
+                        <a id="danhmuc" href="#">☰ DANH MỤC</a>
+                        <ul>
+                            <li><a href="#">TIVI</a></li>
+                            <li><a href="#">XE CỔ</a></li>
+                            <li><a href="#">ĐIỆN THOẠI</a></li>
+                            <li><a href="#">ĐÈN</a></li>
+                            <li><a href="#">Bàn ủi con gà</a></li>
+                            <li><a href="#">Tranh ảnh</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li><a href="#">GIỚI THIỆU</a></li>
+                    <li>
+                        <a href="">HÀNG SƯU TẦM KHÁC</a>
+                        <ul>
+                            <li><a href="#">Sen gỗ</a></li>
+                            <li><a href="#">Loa phường</a></li>
+                            <li><a href="#">Loa GuiGoz</a></li>
+                            <li><a href="#">Máy đánh chữ</a></li>
+                            <li><a href="#">Bàn tính xưa</a></li>
+                            <li><a href="#">Sách xưa</a></li>
+                            <li><a href="#">Bình thủy</a></li>
+                            <li><a href="#">Nón pháp</a></li>
+                        </ul>
+
+
+
+                    </li>
+                    <li><a href="">CẨM NANG ĐỒ CỔ</a></li>
+                    <li><a href="lienhe.html">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+            <div class="breadcrumb-container">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="#">Trang chủ</a> / <span>Nhà Đồ Cổ - Sản phẩm chất lượng - Giá hợp lý</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container main-layout">
+            <!--Nội dung bài viết giới thiệu-->
+            <article>
+                <h1>Nhà Đồ Cổ - Sản phẩm chất lượng - Giá hợp lý</h1>
+
+                <section>
+                    <h2>Về chúng tôi</h2>
+                    <p>
+                        Đồ cổ nghe qua có phần cũ kỹ nhưng đó lại là tình yêu, là niềm đam mê của bao trái tim trên khắp thế giới bởi những dấu ấn thời gian đã để lại trên từng món đồ này. Tại Việt Nam, đồ cổ chưa bao giờ ngừng thu hút giới mộ điệu &amp; những người sành đồ cổ bởi chỉ cần nhìn những kỷ vật thời gian này đã mang đến cho những người đam mê chúng những cảm xúc vô cùng đặc biệt. Với Nhà đồ cổ, cảm xúc về những món đồ lần đầu tiên được nhìn thấy, góp nhặt để mang đến cho tất cả những người yêu đồ cổ vẫn vẹn nguyên bởi nếu không có sự đam mê, không yêu thích, không am hiểu thì cũng khó mà có thể hoạt động trong lĩnh vực này.
+                    </p>
+                    <p>
+                        Vì vậy, nếu bạn là người yêu đồ cổ &amp; luôn khao khát về những món đồ cổ độc đáo cho không gian sống và làm việc của mình hoặc sử dụng thì hãy cho Nhà đồ cổ cơ hội được trò chuyện và giúp bạn sớm tìm thấy món đồ cổ thật hợp nhãn của mình nhé.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Lĩnh vực kinh doanh</h2>
+                    <p>
+                        Nhà đồ cổ chuyên sưu tầm &amp; mang đến cho giới mộ điệu các món đồ cổ ĐỘC - LẠ - CHẤT theo đúng niềm đam mê &amp; tôn chỉ mà chúng tôi những người xây dựng nên Nhà đồ cổ theo đuổi. Đến với Nhà đồ cổ bạn sẽ dễ dàng tìm được các kỷ vật thời gian như: tivi, điện thoại, bàn ủi con gà, tranh ảnh, gốm sứ, xe máy,... Tất cả kỷ vật được cung cấp bởi Nhà đồ cổ đều đã được các chuyên gia kiểm tra kỹ lưỡng về chất lượng cũng như độ tuổi để đảm bảo mang đến những trải nghiệm tuyệt vời nhất dành cho những ai yêu đồ cổ.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Sứ mệnh</h2>
+                    <ul>
+                        <li>Nhà đồ cổ ra đời với sứ mệnh:</li>
+                        <li>Góp nhặt yêu thương qua những kỷ vật thời gian.</li>
+                        <li>Mang đến không gian nhỏ ĐỘC - LẠ - CHẤT cho người yêu đồ cổ.</li>
+                        <li>Lưu giữ và mang những kỷ vật thời gian đến với những người thật sự trân quý chúng.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Tầm nhìn</h2>
+                    <ul>
+                        <li>Nhà đồ cổ hoạt động &amp; vươn đến:</li>
+                        <li>Trở thành cái tên uy tín được giới mộ điệu lựa chọn.</li>
+                        <li>Kết nối những người đam mê đồ cổ với nhau tạo ra sân chơi lành mạnh.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Giá trị cốt lõi</h2>
+                    <ul>
+                        <li>Lưu giữ kỷ vật thời gian</li>
+                    </ul>
+                </section>
+
+                <p><em>Nhà Đồ Cổ trân trọng!</em></p>
+
+                <div class="share-section">
+                    <span>Chia sẻ:</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://nhadoco.com/gioi-thieu.html" target="_blank">facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://nhadoco.com/gioi-thieu.html" target="_blank">twitter</a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://nhadoco.com/gioi-thieu.html" target="_blank">linkedin</a>
+                    <a href="http://pinterest.com/pin/create/link/?url=https://nhadoco.com/gioi-thieu.html" target="_blank">pinterest</a>
+                    <a href="https://www.tumblr.com/share/link?url=https://nhadoco.com/gioi-thieu.html" target="_blank">tumblr</a>
+                </div>
+            </article>
+            <aside></aside>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-main">
+
+            <!-- Cột 1: Thông tin cửa hàng -->
+            <div class="footer-info">
+                <h3>NHÀ ĐỒ CỔ</h3>
+                <p class="footer-slogan">
+                    Kênh mua sắm trực tuyến giá tốt hàng đầu Việt Nam.
+                </p>
+
+                <p>📍 Hẻm 300/52 Nguyễn Văn Linh, Phường Bình Thuận, Quận 7, TP. Hồ Chí Minh</p>
+                <p>✉ nhadoco91@gmail.com</p>
+                <p>☎ 0938 558 669</p>
+            </div>
+
+            <!-- Cột 2: Chính sách -->
+            <div class="footer-policy">
+                <h3>CHÍNH SÁCH</h3>
+                <ul>
+                    <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+                    <li><a href="#">HƯỚNG DẪN THANH TOÁN</a></li>
+                    <li><a href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                    <li><a href="#">CHÍNH SÁCH GIAO HÀNG</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Facebook -->
+            <div class="footer-facebook">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs&width=295&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                        width="100%"
+                        height="200"
+                        style="border:none;overflow:hidden"
+                        scrolling="no"
+                        frameborder="0"
+                        allowfullscreen="true">
+                </iframe>
+            </div>
+
+            <!-- Cột 4: Đăng ký nhận tin -->
+            <div class="footer-newsletter">
+                <h3>NHẬN TIN KHUYẾN MÃI</h3>
+                <form>
+                    <input type="email" placeholder="E-mail" required>
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="footer-bottom">
+            © Bản quyền thuộc về https://nhadoco.com/ - Powered by Nhà Đồ Cổ
+        </div>
+    </footer>
+</body>
+</html>
