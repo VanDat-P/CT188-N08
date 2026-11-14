@@ -226,6 +226,136 @@ nav {
 }
 
 
+
+/* ==========================
+   RESPONSIVE NAVIGATION
+========================== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu>li:first-child {
+        width: 200px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        width: 100%;
+        overflow: visible;
+    }
+
+    nav .container {
+        width: 100%;
+        overflow: visible;
+    }
+
+    /* Menu chính */
+    .menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    /* Các mục menu */
+    .menu>li {
+        width: 100%;
+        min-height: 45px;
+        height: auto;
+        padding: 12px 15px;
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        white-space: normal;
+    }
+
+    /* Danh mục */
+    .menu>li:first-child {
+        width: 100%;
+        height: auto;
+        min-height: 45px;
+        padding: 12px 15px;
+        background-color: #dfab80;
+    }
+
+    /* Link */
+    .menu a {
+        font-size: 14px;
+    }
+
+    /* Ẩn tất cả dropdown */
+    .menu>li>ul,
+    .menu>li:first-child>ul {
+        position: static;
+        width: 100%;
+        display: none;
+        background-color: white;
+        margin-top: 12px;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    /* Bấm vào mục cha để mở dropdown */
+    .menu>li:focus-within>ul {
+        display: block;
+    }
+
+    /* Các mục con */
+    .menu>li>ul>li {
+        width: 100%;
+        height: 40px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu>li>ul>li a {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Hover mục con */
+    .menu>li>ul>li:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+
+/* ĐIỆN THOẠI NHỎ */
+@media (max-width: 480px) {
+
+    .menu>li {
+        padding: 12px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+}
+
+
+
 /* 
 footer */
 
@@ -353,3 +483,76 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Lạc làm */
+
+.breadcrumb-container .container {
+    display: flex; 
+    align-items: center; 
+    height: 60px; 
+}
+
+
+.breadcrumb {
+    font-size: 18px;
+    color: #333;
+}
+
+.breadcrumb a {
+    color: #333; 
+    text-decoration: none; 
+}
+
+.breadcrumb a:hover {
+    color: #dfab80; 
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 30px; 
+    margin-top: 20px; 
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 22px; 
+    color: #222; 
+    font-weight: normal; 
+    margin-bottom: 20px; 
+    margin-top: 0;
+}
+.sort-bar select {
+    margin-left: 10px; 
+    padding: 6px 30px 6px 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    background-color: white; 
+    cursor: pointer;
+    outline: none; 
+}
+
+.sort-bar select:hover {
+    border-color: #dfab80;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
+
