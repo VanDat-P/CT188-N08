@@ -11,7 +11,7 @@
     <link rel="icon" href="../images/logo.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hangsuutamkhac.css">
 </head>
 
 <body>
@@ -95,35 +95,129 @@
 
 
     <!-- Main -->
-    <main>
+<main>
     <div class="container main-layout">
-
-        </div>
         <section class="main-content">
             <div class="content-header">
                 <h1 class="page-title">Chuyên hàng sưu tầm bộ lắp rắp mô hình kiến trúc/di tích</h1>
+
                 <div class="sort-bar">
-                    <span>Lọc</span>
-                    <select>
-                        <option></option>
+                    <label for="sort-select">Sắp xếp:</label>
+                    <select id="sort-select">
+                        <option value="default">Chọn</option>
+                        <option value="desc">Giá giảm dần</option>
+                        <option value="asc">Giá tăng dần</option>
                     </select>
                 </div>
             </div>
+            <div class="product-list">
+
+                <div class="product-card">
+                    <span class="badge">-40%</span>
+                    <a href="#"><img src="../images/Khuê Văn Các.jpg" alt="Khuê Văn Các"></a>
+                    <h3 class="product-name"><a href="#">Khuê Văn Các</a></h3>
+                    <p>
+                        <span class="price-new">299.999đ</span>
+                        <span class="price-old">499.999đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <span class="badge">-26%</span>
+                    <a href="#"><img src="../images/Bà xã.jpg" alt="Thành Phố Barcelona"></a>
+                    <h3 class="product-name"><a href="#">Thành Phố Barcelona</a></h3>
+                    <p>
+                        <span class="price-new">199.000</span>
+                        <span class="price-old">269.000</span>
+                    </p>
+                </div>
+
+                <!-- Sản phẩm không giảm giá: bỏ badge và giá cũ -->
+                <div class="product-card sold-out">
+                    <span class="badge-soldout">Tạm hết hàng</span> 
+                    <a href="#"><img src="../images/Nhà thờ Đức Bà.jpg" alt="Nhà thờ Đức Bà"></a>
+                    <h3 class="product-name"><a href="#">Nhà thờ Đức Bà</a></h3>
+                    <p>
+                        <span class="price-new">399.000đ</span>
+                    </p>
+                </div>
+
+
+
+                <div class="product-card">
+                    <a href="#"><img src="../images/Cầu Tháp London.jpg" alt="Cầu Tháp London"></a>
+                    <h3 class="product-name"><a href="#">Cầu Tháp London</a></h3>
+                    <p>
+                        <span class="price-new">419.000đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <span class="badge">-50%</span>
+                    <a href="#"><img src="../images/Trùng Khánh.jpg" alt="Kiến Trúc Trùng Khánh"></a>
+                    <h3 class="product-name"><a href="#">Kiến Trúc Trùng Khánh</a></h3>
+                    <p>
+                        <span class="price-new">299.000đ</span>
+                        <span class="price-old">149.000đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <a href="#"><img src="../images/Đấu trường la mã.jpg" alt="Đấu Trường La Mã"></a>
+                    <h3 class="product-name"><a href="#">Đấu Trường La Mã</a></h3>
+                    <p>
+                        <span class="price-new">169.000đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card sold-out">
+                    <span class="badge-soldout">Tạm hết hàng</span> 
+                    <a href="#"><img src="../images/Nhà thờ tân định.jpg" alt="Nhà thờ Tân Định"></a>
+                    <h3 class="product-name"><a href="#">Nhà thờ Tân Định</a></h3>
+                    <p>
+                        <span class="price-new">599.000đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <span class="badge">-20%</span>
+                    <a href="#"><img src="../images/Phu Văn Lâu.jpg" alt="Phu Văn Lâu"></a>
+                    <h3 class="product-name"><a href="#">Phu Văn Lâu</a></h3>
+                    <p>
+                        <span class="price-new">119.000đ</span>
+                        <span class="price-old">149.000đ</span>
+                    </p>
+                </div>
+
+
+                <div class="product-card">
+                    <span class="badge">-19%</span>
+                    <a href="#"><img src="../images/Bến Nhà Rồng.jpg" alt="Bến Nhà Rồng"></a>
+                    <h3 class="product-name"><a href="#">Bến Nhà Rồng</a></h3>
+                    <p>
+                        <span class="price-new">299.000đ</span>
+                        <span class="price-old">369.000đ</span>
+                    </p>
+                </div>
+
+
+            </div>
+                <div class="pagination-bar">
+                    <p class="result-text">Hiển thị 1 - 9 / 14 kết quả</p>
+
+                    <ul class="pagination">
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="hangsuutamkhac2.html">2</a></li>
+                        <li><a href="hangsuutamkhac2.html">›</a></li>
+                        <li><a href="hangsuutamkhac2.html">»</a></li>
+                    </ul>
+            </div>
+
         </section>
+
+        <aside></aside>
     </div>
-
-
-
-
-
-
-
-
-
-
-        <aside>
-        </aside>
-    </main>
+</main>
 
     <!-- Footer -->
  

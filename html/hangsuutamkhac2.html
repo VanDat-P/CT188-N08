@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trang web của tôi</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/hangsuutamkhac.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+           
+
+            <div class="container header-top">
+                <a href="trangchu.html" ><img src="../images/logo.png" height="100px" width="100px"> </a>
+                
+                <div class="header-right">
+
+                    <div class="search">
+                        <input type="text" placeholder="tìm kiếm">
+                        <button type="button"> ⌕</button>
+                        
+                    </div>
+
+                    <div class="cart">
+                            <a href="#">
+                                🛒
+                                <span>0</span>
+                            </a>
+                    </div>
+
+
+                </div>
+             
+
+            </div>
+            
+
+
+
+            <nav>
+                <div class="container">
+                    <ul class="menu">
+                        <li>
+                            <a id="danhmuc" href="#">☰ DANH MỤC</a>
+                             <ul>
+                                <li><a href="#">TIVI</a></li>
+                                <li><a href="#">XE CỔ</a></li>
+                                <li><a href="#">ĐIỆN THOẠI</a></li>
+                                <li><a href="#">ĐÈN</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li><a href="#">TRANG CHỦ</a></li>
+                        <li><a href="#">GIỚI THIỆU</a></li>
+                        <li>
+                            <a href="">HÀNG SƯU TẦM KHÁC</a>
+                            <ul>
+                                <li><a href="#">Sen gỗ</a></li>
+                                <li><a href="#">Loa phường</a></li>
+                                <li><a href="#">Loa GuiGoz</a></li>
+                                <li><a href="#">Máy đánh chữ</a></li>
+                                <li><a href="#">Bàn tính xưa</a></li>
+                                <li><a href="#">Sách xưa</a></li>
+                                 <li><a href="#">Bình thủy</a></li>
+                                  <li><a href="#">Nón pháp</a></li>
+                            </ul>
+
+
+
+                        </li>
+                        <li><a href="">CẨM NANG ĐỒ CỔ</a></li>
+                        <li><a href="">LIÊN HỆ</a></li>
+                    </ul>
+                </div>
+                <div class="breadcrumb-container">
+                    <div class="container">
+                        <div class="breadcrumb">
+                            <a href="#">Trang chủ</a> / <span>HÀNG SƯU TẦM KHÁC</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+
+
+    <!-- Main -->
+<main>
+    <div class="container main-layout">
+        <section class="main-content">
+            <div class="content-header">
+                <h1 class="page-title">Chuyên hàng sưu tầm bộ lắp rắp mô hình kiến trúc/di tích</h1>
+
+                <div class="sort-bar">
+                    <label for="sort-select">Sắp xếp:</label>
+                    <select id="sort-select">
+                        <option value="default">Chọn</option>
+                        <option value="desc">Giá giảm dần</option>
+                        <option value="asc">Giá tăng dần</option>
+                        <option value="newest">Từ mới đến cũ</option>
+                        <option value="oldest">Từ cũ đến mới</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-list">
+
+                <div class="product-card">
+                    <a href="#"><img src="../images/Kim Tự Tháp.jpg" alt="Kim Tự Tháp"></a>
+                    <h3 class="product-name"><a href="#">Kim Tự Tháp</a></h3>
+                    <p>
+                        <span class="price-new">399.999đ</span>
+                    </p>
+                </div>
+
+                <div class="product-card">
+                    <span class="badge">-14%</span>
+                    <a href="#"><img src="../images/Nhà Thờ Thánh Paul.jpg" alt="Nhà Thờ Thánh Paul"></a>
+                    <h3 class="product-name"><a href="#">Nhà Thờ Thánh Paul</a></h3>
+                    <p>
+                        <span class="price-new">299.000</span>
+                        <span class="price-old">349.000</span>
+                    </p>
+                </div>
+
+                <!-- Sản phẩm không giảm giá: bỏ badge và giá cũ -->
+                <div class="product-card sold-out">
+                    <span class="badge-soldout">Tạm hết hàng</span> 
+                    <a href="#"><img src="../images/Tháp Đồng Hồ Big Ben.jpg" alt="Tháp Đồng Hồ Big Ben"></a>
+                    <h3 class="product-name"><a href="#">Tháp Đồng Hồ Big Ben</a></h3>
+                    <p>
+                        <span class="price-new">499.000đ</span>
+                    </p>
+                </div>
+
+
+
+                <div class="product-card">
+                    <span class="badge">-16%</span>
+                    <a href="#"><img src="../images/Đền Taj Mahal.jpg" alt="Đền Taj Mahal"></a>
+                    <h3 class="product-name"><a href="#">Đền Taj Mahal</a></h3>
+                    <p>
+                        <span class="price-new">319.000đ</span>
+                        <span class="price-old">379.000đ</span>
+                    </p>
+                </div>
+
+
+            </div>
+                <div class="pagination-bar">
+                    <p class="result-text">Hiển thị 10 - 14 / 14 kết quả</p>
+
+                    <ul class="pagination">
+                        <li><a href="hangsuutamkhac.html">1</a></li>
+                        <li><a href="#" class="active">2</a></li>
+                        <li><a href="#">›</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+            </div>
+
+        </section>
+
+        <aside></aside>
+    </div>
+</main>
+
+    <!-- Footer -->
+ 
+    <footer>
+        <div class="footer-main">
+
+            <!-- Cột 1: Thông tin cửa hàng -->
+            <div class="footer-info">
+                <h3>NHÀ ĐỒ CỔ</h3>
+                <p class="footer-slogan">
+                    Kênh mua sắm trực tuyến giá tốt hàng đầu Việt Nam.
+                </p>
+
+                <p>📍 Hẻm 300/52 Nguyễn Văn Linh, Phường Bình Thuận, Quận 7, TP. Hồ Chí Minh</p>
+                <p>✉ nhadoco91@gmail.com</p>
+                <p>☎ 0938 558 669</p>
+            </div>
+
+            <!-- Cột 2: Chính sách -->
+            <div class="footer-policy">
+                <h3>CHÍNH SÁCH</h3>
+                <ul>
+                    <li><a href="#">HƯỚNG DẪN MUA HÀNG</a></li>
+                    <li><a href="#">HƯỚNG DẪN THANH TOÁN</a></li>
+                    <li><a href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                    <li><a href="#">CHÍNH SÁCH GIAO HÀNG</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Facebook -->
+            <div class="footer-facebook">
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs&width=295&height=200&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                    width="100%"
+                    height="200"
+                    style="border:none;overflow:hidden"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true">
+                </iframe>
+            </div>
+
+            <!-- Cột 4: Đăng ký nhận tin -->
+            <div class="footer-newsletter">
+                <h3>NHẬN TIN KHUYẾN MÃI</h3>
+                <form>
+                    <input type="email" placeholder="E-mail" required>
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bản quyền -->
+        <div class="footer-bottom">
+            © Bản quyền thuộc về https://nhadoco.com/ - Powered by Nhà Đồ Cổ
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>
