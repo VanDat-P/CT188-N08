@@ -1,26 +1,46 @@
 /* Trang đăng nhập / đăng ký */
 
+main {
+    background-color: #f7f3ee;
+}
+
 .auth-page {
     padding: 40px 0;
 }
 
 .auth-card {
-    width: 400px;
+    width: 100%;
+    max-width: 420px;
     margin: 0 auto;
     padding: 30px;
+    box-sizing: border-box;
     background-color: white;
-    border: 1px solid #cccccc;
+    border: 1px solid #dddddd;
+    border-top: 4px solid #8a5a2b;
 }
 
 .auth-card h1 {
+    margin: 0 0 10px 0;
     text-align: center;
     color: #8a5a2b;
 }
 
+.auth-sub {
+    margin: 0 0 25px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+
+.auth-field {
+    margin-bottom: 18px;
+}
+
 .auth-card label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .auth-card input[type="text"],
@@ -28,23 +48,74 @@
 .auth-card input[type="tel"],
 .auth-card input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #cccccc;
     box-sizing: border-box;
+    font-size: 15px;
 }
 
 .auth-card input:focus {
     border-color: #8a5a2b;
+    outline: none;
 }
 
-.auth-card .auth-check {
+/* Thông báo lỗi: ẩn mặc định, chỉ hiện khi có class has-error */
+.auth-error {
+    display: none;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #c0392b;
+}
+
+.auth-field.has-error .auth-error {
+    display: block;
+}
+
+.auth-field.has-error input {
+    border-color: #c0392b;
+}
+
+/* Hộp thông báo */
+.auth-message {
+    display: none;
     margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #2d6a2d;
+    background-color: #eaf6ea;
+    border: 1px solid #b7dfb7;
+}
+
+/* Ghi nhớ đăng nhập + Quên mật khẩu */
+.auth-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.auth-row label {
+    display: inline;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Ô đồng ý chính sách */
+.auth-card .auth-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 .auth-card .auth-check label {
-    display: inline;
+    margin: 0;
     font-weight: normal;
+    font-size: 14px;
+}
+
+.auth-card .auth-check input {
+    margin-top: 3px;
 }
 
 .auth-card button {
@@ -63,9 +134,18 @@
 
 .auth-card a {
     color: #8a5a2b;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
 }
 
 .auth-switch {
     margin-top: 20px;
     text-align: center;
+    font-size: 14px;
+}
+.auth-card input::placeholder {
+    color: #aaaaaa;
 }
