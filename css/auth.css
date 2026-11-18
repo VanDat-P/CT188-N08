@@ -1,0 +1,71 @@
+/* Trang đăng nhập / đăng ký */
+
+.auth-page {
+    padding: 40px 0;
+}
+
+.auth-card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.auth-card h1 {
+    text-align: center;
+    color: #8a5a2b;
+}
+
+.auth-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="tel"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.auth-card input:focus {
+    border-color: #8a5a2b;
+}
+
+.auth-card .auth-check {
+    margin-bottom: 15px;
+}
+
+.auth-card .auth-check label {
+    display: inline;
+    font-weight: normal;
+}
+
+.auth-card button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #8a5a2b;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    background-color: #6b4420;
+}
+
+.auth-card a {
+    color: #8a5a2b;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    text-align: center;
+}

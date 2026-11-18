@@ -42,8 +42,53 @@ header {
     justify-content: space-between;
     align-items: center;
 
+}/* NÚT ĐĂNG NHẬP */
+.login {
+    display: inline-block;
+    padding: 11px 20px;
+    min-width: 120px;
+    text-align: center;
+
+    background-color: #79502f;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid #79502f;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
+.login:hover {
+    background-color: #5c3821;
+    border-color: #5c3821;
+}
+
+/* NÚT ĐĂNG KÝ */
+.register {
+    display: inline-block;
+    padding: 11px 20px;
+    min-width: 120px;
+    text-align: center;
+
+    background-color: #d9915b;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border: 2px solid #d9915b;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.register:hover {
+    background-color: #bd7040;
+    border-color: #bd7040;
+}
 .search {
     width: 200px;
     height: 40px;
