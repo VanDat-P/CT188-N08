@@ -1,0 +1,181 @@
+
+/* ===== TRANG DANH SÁCH CẨM NANG ===== */
+
+.camnang {
+    max-width: 1200px;
+    margin: 35px auto 50px;
+    padding: 0 15px;
+}
+
+.camnang h1 {
+    color: #713217;
+    font-size: 28px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.card a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+}
+
+.anh-bia {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.anh-bia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tieude {
+    font-size: 19px;
+    font-weight: bold;
+    color: #713217;
+    padding: 15px 15px 8px;
+    line-height: 1.5;
+}
+
+.meta {
+    color: #888;
+    font-size: 13px;
+    padding: 0 15px;
+}
+
+.mota {
+    padding: 12px 15px 18px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camnang h1 {
+        font-size: 22px;
+    }
+}
+
+
+/* ===== BÀI VIẾT CẨM NANG ===== */
+.noidung {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto 50px;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222;
+}
+
+.noidung h1 {
+    font-size: 28px;
+    line-height: 1.3;
+    color: #713217;
+    margin-bottom: 8px;
+}
+
+.noidung .meta {
+    font-size: 13px;
+    color: #777;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.noidung .gioithieu {
+    padding: 12px 16px;
+    background: #faf3ec;
+    border-left: 4px solid #dfab80;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 20px;
+}
+
+.noidung h2 {
+    font-size: 21px;
+    color: #8a5a2e;
+    margin: 28px 0 10px;
+}
+
+.noidung h3 {
+    font-size: 18px;
+    color: #8a5a2e;
+    margin: 24px 0 8px;
+}
+
+.noidung p {
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.noidung ul,
+.noidung ol {
+    padding-left: 26px;
+    margin: 10px 0;
+}
+
+.noidung li {
+    margin-bottom: 6px;
+}
+
+.noidung .luu_y {
+    background: #faf3ec;
+    border-left: 4px solid #713217;
+    padding: 12px 16px;
+    margin: 18px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.noidung hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0 14px;
+}
+
+.noidung em {
+    color: #8a5a2e;
+}
+
+.noidung li a {
+    color: #713217;
+}
+/* 
+nút quay lại trang cẩm nang */
+.noidung > a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #713217;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.noidung > a:hover {
+    background: #8a5a2e;
+}
