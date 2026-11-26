@@ -137,3 +137,41 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+/* Banner có 2 nút trái / phải */
+
+.banner {
+    position: relative;
+}
+
+.banner button {
+    position: absolute;
+    top: 45%;
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.banner button:first-of-type {
+    left: 10px;
+}
+
+.banner button:last-of-type {
+    right: 10px;
+}
+
+
+.banner {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner img {
+    width: 100%;
+}

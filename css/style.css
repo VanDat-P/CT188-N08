@@ -601,3 +601,143 @@ footer {
     }
 }
 
+
+
+/* aside danh muc */
+
+
+.sidebar {
+    width: 100%;
+}
+
+.sidebar-box {
+    padding: 15px 15px 5px 15px;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #8a5a2b;
+}
+
+.sidebar-title {
+    margin: 10px 0 12px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    color: #6b4420;
+}
+
+/* Đường kẻ có chấm tròn ở giữa */
+.sidebar-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.sidebar-line::before,
+.sidebar-line::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #8a5a2b;
+}
+
+.sidebar-line span {
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #dfae84;
+}
+
+/* Danh sách */
+.sidebar-list,
+.sidebar-list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-list > li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebar-list > li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-list a,
+.sidebar-list summary {
+    display: block;
+    padding: 14px 5px;
+    font-size: 16px;
+    color: #222222;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-list a:hover,
+.sidebar-list summary:hover {
+    color: #8a5a2b;
+}
+
+/* Dấu + / − bên phải */
+.sidebar-list summary {
+    list-style: none;
+}
+
+.sidebar-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.sidebar-list summary::after {
+    content: "+";
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    color: #6b4420;
+}
+
+.sidebar-list details[open] summary::after {
+    content: "−";
+}
+
+/* Mục con */
+.sidebar-list details ul {
+    padding-bottom: 8px;
+}
+
+.sidebar-list details ul a {
+    padding: 8px 5px 8px 20px;
+    font-size: 15px;
+    color: #555555;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagination-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
