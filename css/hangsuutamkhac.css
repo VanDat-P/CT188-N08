@@ -106,6 +106,18 @@ nav {
     position: relative;
 }
 
+
+.menu li ul.submenu {
+    width: 100%;                 
+    padding-top: 12px;            
+    background-color: transparent; 
+}
+
+.menu a.has-dropdown::after {
+    content: " ▾";
+    font-size: 18px;
+}
+
 /* Menu con */
 .menu li ul {
     position: absolute;
