@@ -1,0 +1,70 @@
+.ct-box {
+    overflow: hidden;
+    margin: 30px 0 50px;
+}
+.ct-box img {
+    float: left;
+    width: 450px;
+    margin-right: 30px;
+}
+
+.ct-ten {
+    color: #8a5a2e;
+    margin-bottom: 15px;
+}
+.ct-gia {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.ct-gia-cu {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+.ct-mota {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ct-box button {
+    background: #8a5a2e;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+.ct-ten {
+    font-size: 28px;
+}
+
+.ct-box button:hover {
+    background: #713217;
+}
+
+.ct-het-hang {
+    color: red;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .ct-box img {
+        float: none;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .ct-ten {
+        font-size: 23px;
+    }
+}

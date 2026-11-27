@@ -1,0 +1,205 @@
+
+/* TIÊU ĐỀ */
+.gh-title {
+    text-align: center;
+    color: #8a5a2e;
+    margin: 30px 0;
+}
+
+/* BẢNG GIỎ HÀNG */
+.gh-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.gh-table th {
+    background: #f2e6da;
+    color: #8a5a2e;
+    padding: 12px;
+}
+
+.gh-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.gh-table img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.gh-table input {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* NÚT TĂNG GIẢM SỐ LƯỢNG */
+.gh-soluong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.gh-soluong button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #f2e6da;
+    color: #713217;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.gh-soluong button:hover {
+    background: #dfb58e;
+}
+
+/* NÚT XÓA */
+.btn-xoa {
+    padding: 7px 12px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-xoa:hover {
+    background: #bd2130;
+}
+
+/* TỔNG KẾT ĐƠN HÀNG */
+.gh-thanhtoan {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 0 40px;
+}
+
+.gh-tongket {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.gh-tongket h3 {
+    color: #713217;
+    margin-bottom: 18px;
+}
+
+.gh-dong {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+.gh-tong {
+    color: red;
+    font-size: 19px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.gh-ghichu {
+    font-size: 13px;
+    color: #888;
+}
+
+/* CÁC NÚT ĐIỀU HƯỚNG */
+.gh-nut {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-tieptuc,
+.btn-thanhtoan {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.btn-tieptuc {
+    background: #f2e6da;
+    color: #713217;
+}
+
+.btn-thanhtoan {
+    background: #713217;
+    color: white;
+}
+
+.btn-tieptuc:hover {
+    background: #dfc5ad;
+}
+
+.btn-thanhtoan:hover {
+    background: #8a5a2e;
+}
+
+/* GIỎ HÀNG TRỐNG */
+.gh-trong {
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.gh-trong h3 {
+    color: #713217;
+}
+
+.gh-trong p {
+    color: #777;
+    margin: 15px 0;
+}
+
+.gh-trong a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #713217;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .gh-table {
+        font-size: 13px;
+    }
+
+    .gh-table th,
+    .gh-table td {
+        padding: 6px 3px;
+    }
+
+    .gh-table img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .gh-thanhtoan {
+        justify-content: center;
+    }
+
+    .gh-tongket {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
